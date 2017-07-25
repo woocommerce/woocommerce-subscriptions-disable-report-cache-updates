@@ -1,6 +1,6 @@
 # WooCommerce Subscriptions - Disable Report Cache Updates
 
-Using [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/)? Having troubles with background with the resource intensive report cache updates?
+Using [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/)? Having troubles with the resource intensive report cache updates?
 
 Install and activate this plugin. It will disable automatic cache update for [subscription reports](https://docs.woocommerce.com/document/subscriptions/reports/).
 
