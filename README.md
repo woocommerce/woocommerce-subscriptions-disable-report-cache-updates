@@ -6,7 +6,7 @@ Install and activate this plugin. It will disable automatic cache update for [su
 
 ## Requirements
 
-This plugin requires WooCommerce 2.2 or newer. It is only using for Subscriptions v2.1 or newer, which is the version in which the reporting feature was introduced.
+This plugin requires WooCommerce 2.2 or newer. It is only useful for Subscriptions v2.1 or newer, which is the version in which the reporting feature was introduced.
 
 ## Installation
 
