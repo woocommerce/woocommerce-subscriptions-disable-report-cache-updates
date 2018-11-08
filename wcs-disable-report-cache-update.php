@@ -31,6 +31,8 @@
  * @since		1.0
  */
 
+require_once( 'includes/class-pp-dependencies.php' );
+
 function wcs_disable_report_cache_update() {
 
 	$cached_report_classes = array(
