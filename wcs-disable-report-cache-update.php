@@ -38,6 +38,10 @@ function wcs_disable_report_cache_update() {
 		'WC_Report_Upcoming_Recurring_Revenue',
 		'WC_Report_Subscription_By_Product',
 		'WC_Report_Subscription_By_Customer',
+		'WCS_Report_Subscription_Events_By_Date',
+		'WCS_Report_Upcoming_Recurring_Revenue',
+		'WCS_Report_Subscription_By_Product',
+		'WCS_Report_Subscription_By_Customer',
 	);
 
 	foreach ( $cached_report_classes as $report_class ) {
