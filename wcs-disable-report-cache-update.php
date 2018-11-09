@@ -5,13 +5,13 @@
  * Description: Disable the automatic updates to report cache run by WooCommerce Subscriptions.
  * Author: Prospress Inc.
  * Author URI: http://prospress.com/
- * Version: 1.0
+ * Version: 1.1.0
  * License: GPLv3
  *
  * GitHub Plugin URI: Prospress/woocommerce-subscriptions-disable-report-cache-updates
  * GitHub Branch: master
  *
- * Copyright 2017 Prospress, Inc.  (email : freedoms@prospress.com)
+ * Copyright 2018 Prospress, Inc.  (email : freedoms@prospress.com)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
