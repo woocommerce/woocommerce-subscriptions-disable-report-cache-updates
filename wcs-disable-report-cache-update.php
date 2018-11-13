@@ -35,6 +35,10 @@ require_once( 'includes/class-pp-dependencies.php' );
 
 function wcs_disable_report_cache_update() {
 
+	if ( ! is_admin() || ! PP_Dependencies::is_subscriptions_active() ) {
+		return;
+	}
+
 	$cached_report_classes = array(
 		'WC_Report_Subscription_Events_By_Date',
 		'WC_Report_Upcoming_Recurring_Revenue',
