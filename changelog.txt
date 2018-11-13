@@ -1,0 +1,5 @@
+*** WooCommerce Subscriptions - Disable Report Cache Updates Changelog ***
+
+2018.11.13 - version 1.2.0
+* Fix: remove hooks from Action Scheduler to support Subscriptions 2.4.0 and newer
+* Tweak: only run in admin context to avoid slowing down uncached front-end requests
