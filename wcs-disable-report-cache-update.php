@@ -33,6 +33,38 @@
 
 require_once( 'includes/class-pp-dependencies.php' );
 
+/**
+ * Attach callbacks.
+ */
+function wcs_drcu_init() {
+
+	if ( ! PP_Dependencies::is_subscriptions_active() ) {
+		return;
+	}
+
+	// Pre WooCommerce Subscriptions 2.3, disable the reports by un-scheduling the cron report cache update events.
+	if ( version_compare( WC_Subscriptions::$version, '2.3.0', '<' )  ) {
+		add_action( 'shutdown', 'wcs_disable_report_cache_update', 11 );
+	} else {
+		add_filter( 'pre_option_woocommerce_subscriptions_cache_updates_enabled', 'wcs_disable_background_report_cache_updates', 11 );
+	}
+}
+add_action( 'plugins_loaded', 'wcs_drcu_init', 11 );
+
+/**
+ * Disable the report cache updates by returning 'no' from the woocommerce_subscriptions_cache_updates_enabled option.
+ *
+ * @return string 'no' to disable cache updates.
+ */
+function wcs_disable_background_report_cache_updates() {
+	return 'no';
+}
+
+/**
+ * Clear subscription report cache updates from WP Cron.
+ *
+ * Intended to run on shutdown and on WC Subscriptions versions prior to 2.3.
+ */
 function wcs_disable_report_cache_update() {
 
 	if ( ! is_admin() || ! PP_Dependencies::is_subscriptions_active() ) {
@@ -54,4 +86,3 @@ function wcs_disable_report_cache_update() {
 		wp_clear_scheduled_hook( 'wcs_report_update_cache', array( 'report_class' => $report_class ) );
 	}
 }
-add_action( 'shutdown', 'wcs_disable_report_cache_update', 11 );
