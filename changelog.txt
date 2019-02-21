@@ -1,5 +1,9 @@
 *** WooCommerce Subscriptions - Disable Report Cache Updates Changelog ***
 
+2010.02.21 - version 1.3.0
+* Tweak: override option value to disable report cache rather than using old method of unhooking callbacks
+* Fix: display correct status for report cache in WooCommerce > System Status
+
 2018.11.13 - version 1.2.0
 * Fix: remove hooks from Action Scheduler to support Subscriptions 2.4.0 and newer
 * Tweak: only run in admin context to avoid slowing down uncached front-end requests
